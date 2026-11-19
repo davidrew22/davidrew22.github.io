@@ -47,6 +47,14 @@ h1 { margin-block: 7px 9px; font-size: clamp(3.2rem, 6.65vw, 6rem); letter-spaci
 
 .section { padding-block: 39px; border-bottom: 1px solid var(--rule); }
 .section h2 { margin-bottom: 17px; color: var(--forest); font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -.015em; }
+.featured-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+.featured-card { display: flex; flex-direction: column; border: 1px solid var(--rule); border-radius: 9px; background: var(--surface); }
+.featured-card > img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; border-bottom: 1px solid var(--rule); border-radius: 8px 8px 0 0; }
+.featured-body { display: flex; flex: 1; flex-direction: column; align-items: start; padding: 15px 17px 17px; }
+.featured-body h3 { font-size: clamp(1.55rem, 2.75vw, 2.25rem); margin-block: 6px 8px; }
+.featured-body > p:not(.eyebrow) { color: var(--muted); }
+.featured-body .text-link { margin-top: auto; padding-top: 10px; }
+
 .about-copy { max-width: 78ch; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin-top: 15px; list-style: none; }
 .tags li { border: 1px solid var(--rule); border-radius: 5px; background: var(--surface); padding: 3px 9px; color: var(--muted); font-size: .79rem; }
@@ -96,6 +104,10 @@ details p { margin-top: 4px; color: var(--muted); }
 .timeline a { color: var(--accent); }
 .footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 20px; padding-block: 23px 36px; color: var(--muted); font-size: .86rem; }
 
+@media (max-width: 760px) {
+  .featured-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
 @media (max-width: 680px) {
   .wrap { width: calc(100% - 36px); }
   .profile { grid-template-columns: minmax(0, 1fr); gap: 20px; }
@@ -122,8 +134,8 @@ details p { margin-top: 4px; color: var(--muted); }
   body { background: white; }
   .wrap { width: auto; }
   .profile { padding-block: 15px; }
-  .portrait, .profile-links, .section-nav, .case-image-link, .project figure, .footer-links, .skip { display: none; }
+  .portrait, .profile-links, .section-nav, .case-image-link, .project figure, .featured-card > img, .footer-links, .skip { display: none; }
   .profile { display: block; }
   h1 { font-size: 42pt; }
-  .entry, .project, .case-study { break-inside: avoid; }
+  .entry, .project, .case-study, .featured-card { break-inside: avoid; }
 }

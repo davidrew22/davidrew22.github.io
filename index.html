@@ -34,10 +34,10 @@
 
   <nav class="section-nav" aria-label="Portfolio sections">
     <ul class="wrap">
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#leadership">Leadership</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#resume">Résumé</a></li>
@@ -45,6 +45,39 @@
   </nav>
 
   <main class="wrap" id="main">
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Featured Projects</h2>
+      <div class="featured-grid">
+        <article class="featured-card">
+          <img src="./assets/sobel-comparison.jpg" alt="Grayscale photo beside its Sobel edge detection result" width="1012" height="897">
+          <div class="featured-body">
+            <p class="eyebrow">Digital design · SystemVerilog</p>
+            <h3>Grayscale Image-Processing Chip</h3>
+            <p>I lead a four-person team developing a Sobel edge detection chip and work on its SPI interface.</p>
+            <a class="text-link" href="#stars">Read the chip write-up <span aria-hidden="true">↓</span></a>
+          </div>
+        </article>
+        <article class="featured-card">
+          <img src="./assets/berryweather-live.png" alt="BerryWeather dashboard with live weather and soil readings" width="1280" height="693">
+          <div class="featured-body">
+            <p class="eyebrow">Embedded firmware · ESP32</p>
+            <h3>BerryWeather</h3>
+            <p>I wrote ESP32 firmware and integrated sensors for a low-cost weather monitor for Indiana growers.</p>
+            <a class="text-link" href="#berryweather">Read the BerryWeather write-up <span aria-hidden="true">↓</span></a>
+          </div>
+        </article>
+        <article class="featured-card">
+          <img src="./assets/eventquant.jpg" alt="EventQuant dashboard showing top-traded prediction markets" width="1360" height="689">
+          <div class="featured-body">
+            <p class="eyebrow">Full-stack development · MongoDB</p>
+            <h3>EventQuant</h3>
+            <p>I founded and built a platform that brings prediction market data and transcript research into one place.</p>
+            <a class="text-link" href="#eventquant">Read the EventQuant case study <span aria-hidden="true">↓</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <p class="about-copy">I study electrical engineering at Purdue and expect to graduate in fall 2028. At EventQuant, I use interviews and market data to decide what to build, then develop and ship the tools myself. At Purdue, I work on the hardware and firmware behind image processing and real-time sensor systems.</p>
@@ -104,8 +137,8 @@
       </article>
     </section>
 
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Featured Projects</h2>
+    <section class="section" aria-labelledby="project-details-title">
+      <h2 id="project-details-title">Project Details</h2>
       <article class="case-study" id="eventquant" aria-labelledby="eventquant-title">
         <div class="case-heading">
           <div class="entry-heading">
